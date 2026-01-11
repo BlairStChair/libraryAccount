@@ -36,7 +36,7 @@ function displayBooks(){
         bookCard.id= "bookCardId" + i;
         bookContainer.appendChild(bookCard);
 
-
+        //delete button
         const deleteBookBtn = document.createElement("button");
         deleteBookBtn.textContent = "X";
         bookCard.appendChild(deleteBookBtn);
@@ -60,6 +60,11 @@ function displayBooks(){
         const readP = document.createElement("p");
         readP.textContent = `Read: ${libraryArray[i].read}`;
         bookCard.appendChild(readP);
+
+        //button to change book status
+        const changeStatus = document.createElement("button");
+        changeStatus.textContent = "Change status";
+        bookCard.appendChild(changeStatus);
     }
 }
 
