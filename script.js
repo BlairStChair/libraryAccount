@@ -41,6 +41,13 @@ function displayBooks(){
         deleteBookBtn.textContent = "X";
         bookCard.appendChild(deleteBookBtn);
 
+        deleteBookBtn.addEventListener("click", () =>{
+            libraryArray.splice(i,1);
+
+            books.innerHTML = "";
+            displayBooks();
+        });
+
         //adding book's author
         const authorP = document.createElement("p");
         authorP.textContent = `Author: ${libraryArray[i].author}`;
