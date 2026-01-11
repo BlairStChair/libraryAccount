@@ -119,7 +119,7 @@ body{
     padding: 0 1.7vw;
 }
 
-.bookAdding #addBook{
+.bookAdding #addBook, .deleteBookBtn, .changeStatus{
     background-color: #F8EFE7;
     color: #74685f;
     border-color: #c0b7af;
@@ -129,9 +129,14 @@ body{
     font-family: PublicSans-Medium;
     padding: 1vh 0.5vw;
     font-size: 1.3rem;
+    margin: 10px;
 }
 
-.bookAdding #addBook:hover{
+.deleteBookBtn{
+    padding: 0.1vw;
+}
+
+.bookAdding #addBook:hover, .deleteBookBtn:hover, .changeStatus:hover{
     background-color: #c0b7af;
     color: #F8EFE7;
 }

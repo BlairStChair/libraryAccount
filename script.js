@@ -39,6 +39,7 @@ function displayBooks(){
         //delete button
         const deleteBookBtn = document.createElement("button");
         deleteBookBtn.textContent = "X";
+        deleteBookBtn.className = "deleteBookBtn";
         bookCard.appendChild(deleteBookBtn);
 
         deleteBookBtn.addEventListener("click", () =>{
@@ -71,6 +72,7 @@ function displayBooks(){
         //button to change book status
         const changeStatus = document.createElement("button");
         changeStatus.textContent = "Change status";
+        changeStatus.className = "changeStatus";
         bookCard.appendChild(changeStatus);
 
         changeStatus.addEventListener("click", () => {
