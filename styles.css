@@ -38,7 +38,7 @@ body{
 .navbar{
     background-color: #EFE5DB;
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +149,7 @@ body{
     height: 100%;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.6);
-    /* display: block; ZMIEŃ POTEM NA NONE */
+    display: none;
 }
 
 .bookForm{

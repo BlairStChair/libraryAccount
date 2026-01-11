@@ -20,8 +20,6 @@ addBookToLibrary('Stephen King', 'The Shining', 505, 'Yes');
 addBookToLibrary('Harper Lee', 'Killing The Mockingbird', 336, "No");
 addBookToLibrary('George Orwell', '1984', 328, "Yes");
 
-
-
 function displayBooks(){
     const books = document.querySelector(".books");
 
@@ -65,9 +63,22 @@ displayBooks();
 
 const addBook = document.querySelector("#addBook");
 const bookFormBg = document.querySelector(".bookFormBg");
+const closeBookForm = document.querySelector(".closeBookForm");
+const addBookBtn = document.querySelector(".addBookBtn");
 
+//displaying form to add new book
 addBook.addEventListener("click", () => {
     bookFormBg.style.display = "block";
+});
+
+//closing the form
+closeBookForm.addEventListener("click", () => {
+    bookFormBg.style.display = "none";
+});
+
+//submitting new book
+addBookBtn.addEventListener("click", () => {
+
 });
 
  
