@@ -65,6 +65,16 @@ function displayBooks(){
         const changeStatus = document.createElement("button");
         changeStatus.textContent = "Change status";
         bookCard.appendChild(changeStatus);
+
+        changeStatus.addEventListener("click", () => {
+            if(libraryArray[i].read == "No"){
+                libraryArray[i].read = "Yes";
+            }else{
+               libraryArray[i].read = "No"; 
+            }
+            books.innerHTML = "";
+            displayBooks();
+        });
     }
 }
 
