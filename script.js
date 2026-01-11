@@ -23,8 +23,7 @@ addBookToLibrary('George Orwell', '1984', 328, "Yes");
 function displayBooks(){
     const books = document.querySelector(".books");
 
-    for (let i = 0; i < libraryArray.length; i++) {
-        
+    for(let i = 0; i < libraryArray.length; i++){
         //Creating containers for each book
         const bookContainer = document.createElement("div");
         bookContainer.className = "bookContainer";
@@ -37,34 +36,41 @@ function displayBooks(){
         bookCard.id= "bookCardId" + i;
         bookContainer.appendChild(bookCard);
 
+
+        const deleteBookBtn = document.createElement("button");
+        deleteBookBtn.textContent = "X";
+        bookCard.appendChild(deleteBookBtn);
+
         //adding book's author
-        var authorP = document.createElement("p");
+        const authorP = document.createElement("p");
         authorP.textContent = `Author: ${libraryArray[i].author}`;
         bookCard.appendChild(authorP);
 
         //adding book's title
-        var titleP = document.createElement("p");
+        const titleP = document.createElement("p");
         titleP.textContent = `Title: ${libraryArray[i].title}`;
         bookCard.appendChild(titleP);
 
         //adding number of pages
-        var pagesP = document.createElement("p");
+        const pagesP = document.createElement("p");
         pagesP.textContent = `Pages: ${libraryArray[i].numberOfPages}`;
         bookCard.appendChild(pagesP);
 
         //showing if book was read or not
-        var readP = document.createElement("p");
+        const readP = document.createElement("p");
         readP.textContent = `Read: ${libraryArray[i].read}`;
         bookCard.appendChild(readP);
     }
 }
 
-displayBooks();
-
 const addBook = document.querySelector("#addBook");
 const bookFormBg = document.querySelector(".bookFormBg");
 const closeBookForm = document.querySelector(".closeBookForm");
 const addBookBtn = document.querySelector(".addBookBtn");
+const formAuthor = document.querySelector(".author");
+const formTitle = document.querySelector(".title");
+const formpPages = document.querySelector(".pages");
+const formRead = document.querySelector(".read");
 
 //displaying form to add new book
 addBook.addEventListener("click", () => {
@@ -78,7 +84,12 @@ closeBookForm.addEventListener("click", () => {
 
 //submitting new book
 addBookBtn.addEventListener("click", () => {
-
+    addBookToLibrary(formAuthor.value, formTitle.value, formpPages.value, formRead.value);
+    
+    const books = document.querySelector(".books");
+    books.innerHTML = "";
+ 
+    displayBooks();
 });
 
- 
+displayBooks();
